@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zahid.hibernateJpa.model.Book" table="BOOK" lazy="false">
+        <id name="id">
+            <column name="ID" sql-type="number(38, 0)" not-null="true" unique="true"/>
+            <generator class="increment"/>
+        </id>
+        <property name="code">
+            <column name="CODE" sql-type="varchar(50)" not-null="false"/>
+        </property>
+        <property name="title">
+            <column name="TITLE" sql-type="varchar(50)" not-null="false"/>
+        </property>
+        <property name="publishingYear">
+            <column name="PUBLISHING_YEAR" sql-type="varchar(20)" not-null="false"/>
+        </property>
+        <property name="edition">
+            <column name="EDITION" sql-type="varchar(20)" not-null="false"/>
+        </property>
+        <property name="isbn">
+            <column name="ISBN" sql-type="varchar(50)" not-null="false"/>
+        </property>
+        <property name="photoRef">
+            <column name="PHOTOREF" sql-type="varchar(50)" not-null="false"/>
+        </property>
+    </class>
+
+</hibernate-mapping>
